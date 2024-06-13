@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planting Records</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Planting Records</h1>
+    </header>
+    <main>
+        <!-- Crop registration section -->
+        <form id="crop_form" name="cropForm" onsubmit="createCrop(); return false">
+            <label for="crop_name">Crop Name</label>
+            <input name="crop_name" id="crop_name" type="text" required>
+
+            <label for="planting_date">Planting Date</label>
+            <input name="planting_date" id="planting_date" type="date" placeholder="dd-mm-yyyy" required>
+
+            <label for="growth_status">Growth Status</label>
+            <select name="growth_status" id="growth_status" required>
+                <option value="Planted">Planted</option>
+                <option value="Germinating">Germinating</option>
+                <option value="Growing">Growing</option>
+                <option value="Flowering">Flowering</option>
+                <option value="Fruiting">Fruiting</option>
+                <option value="Harvesting">Harvesting</option>
+                <option value="Dormant">Dormant</option>
+            </select>
+
+            <button id="create_record" type="submit">Create Record</button>
+        </form>
+
+        <!-- Crop list section -->
+        <div>
+            <h2>Registered Crops</h2>
+            <table id="crop_table">
+                <thead>
+                    <tr>
+                        <th>Crop Name</th>
+                        <th>Planting Date</th>
+                        <th>Growth Status</th>
+                    </tr>
+                </thead>
+                <tbody id="crop_table_body">
+                    <!-- Rows will be added here dynamically -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <!-- JavaScript file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
