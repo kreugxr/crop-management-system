@@ -22,6 +22,9 @@ This application allows users to record and manage planting details for various 
 - **Viewing Crops:** Registered crops will appear in the table below the form.
 - **Resetting Form:** The form fields reset automatically after each crop record is added.
 
+## Demo
+Explore the live demo: [Crop Management System Demo](https://crop-management-system.vercel.app/)
+
 ## Files
 - **index.html:** Main application file containing the structure and form.
 - **style.css:** Stylesheet for visual enhancements.
